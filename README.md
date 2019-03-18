@@ -10,6 +10,7 @@ If you need more methods, please shot your requirements to me. Or you refer to h
 ```
 const settings = {
     jira: {
+        url: 'https://yourCompany.atlassian.net'
         auth: '==yourAuthentication=='        
     },
     zephyr: {
