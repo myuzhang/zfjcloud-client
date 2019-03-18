@@ -1,7 +1,8 @@
 const syncRequest = require('sync-request');
 
 module.exports = class Jira {
-    constructor(auth, projectName) {
+    constructor(apiUrl, auth, projectName) {
+        this.apiUrl = apiUrl;
         this.auth = auth;
         this.projectName = projectName;
         this.project = this.getProject();
@@ -17,7 +18,7 @@ module.exports = class Jira {
             body: payload
         };
     
-        var res = syncRequest(method, 'https://csrconnect.atlassian.net/rest/api/2/' + source, options);
+        var res = syncRequest(method, this.apiUrl + source, options);
         return JSON.parse(res.getBody('utf8'));
     }
 

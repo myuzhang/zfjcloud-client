@@ -3,7 +3,7 @@ const Zephyr = require('./zephyrService');
 
 module.exports = class ZfjCloud {
     constructor(settings) {
-        this.jira = new Jira(settings.jira.auth, settings.projectName);
+        this.jira = new Jira(settings.jira.apiUrl, settings.jira.auth, settings.projectName);
         this.zephyr = new Zephyr(settings.zephyr.accessKey, settings.zephyr.secretKey, settings.zephyr.user);
     }
 
