@@ -1,8 +1,8 @@
 const syncRequest = require('sync-request');
 
 module.exports = class Jira {
-    constructor(apiUrl, auth, projectName) {
-        this.apiUrl = apiUrl;
+    constructor(url, auth, projectName) {
+        this.apiUrl = `${url}/rest/api/2/`;
         this.auth = auth;
         this.projectName = projectName;
         this.project = this.getProject();
