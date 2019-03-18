@@ -1,5 +1,5 @@
 {
-  "name": "zjfcloud-client",
+  "name": "zfjcloud-client",
   "version": "1.0.0",
   "description": "A simple wrapper to call Zephyr and Jira cloud based APIs",
   "main": "index.js",
